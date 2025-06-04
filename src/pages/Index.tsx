@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import ThemeToggle from '@/components/ThemeToggle';
+import TerminalOverlay from '@/components/TerminalOverlay';
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import ExperienceTimeline from '@/components/ExperienceTimeline';
+import ProjectsGrid from '@/components/ProjectsGrid';
+import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-dark-bg text-text-primary">
+      <ThemeToggle />
+      <TerminalOverlay />
+      
+      <HeroSection />
+      <AboutSection />
+      <ExperienceTimeline />
+      <ProjectsGrid />
+      <ContactSection />
+      
+      {/* Footer */}
+      <footer className="py-8 bg-dark-surface border-t border-purple-muted/20">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-text-tertiary font-mono text-sm">
+            © 2024 Senior Full Stack Developer. Built with React & TypeScript.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
