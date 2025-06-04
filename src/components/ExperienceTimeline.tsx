@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 const ExperienceTimeline = () => {
   const experiences = [
     {
-      year: '2024',
-      role: 'Freelance Web Developer',
+      year: 'Mar 2024 - Present',
+      role: 'Software Developer (Freelance)',
       company: 'Upwork',
       description:
         'Delivered responsive web applications for clients in auto, legal tech, and e-commerce industries. Built frontend features, integrated REST APIs, and managed CI/CD workflows independently.',
@@ -19,7 +19,7 @@ const ExperienceTimeline = () => {
       ],
     },
     {
-      year: '2023',
+      year: 'Feb 2023 - March 2024',
       role: 'Junior Developer',
       company: 'Richards-Wilcox Canada',
       description:
@@ -35,7 +35,7 @@ const ExperienceTimeline = () => {
       ],
     },
     {
-      year: '2022',
+      year: 'May 2022 - Feb 2023',
       role: 'Web Developer Intern',
       company: 'Lumose Marketplace Inc.',
       description:
@@ -50,7 +50,7 @@ const ExperienceTimeline = () => {
       ],
     },
     {
-      year: '2021',
+      year: 'Sep 2021 - May 2022',
       role: 'Customer Service Rep (Bilingual)',
       company: 'ClaimsPro LP',
       description:
@@ -58,7 +58,7 @@ const ExperienceTimeline = () => {
       tech: ['CRM', 'Ticketing Systems', 'Bilingual Support'],
     },
     {
-      year: '2020',
+      year: 'Jan 2019 - Mar 2021',
       role: 'Technical Consultant',
       company: 'OCDC',
       description:
