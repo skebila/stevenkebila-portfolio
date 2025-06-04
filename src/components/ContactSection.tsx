@@ -92,7 +92,7 @@ const ContactSection = () => {
                   href="mailto:portfolio@developer.com" 
                   className="text-purple-muted hover:underline"
                 >
-                  portfolio@developer.com
+                  info@stevenkebila.com
                 </a>
               </p>
             </div>

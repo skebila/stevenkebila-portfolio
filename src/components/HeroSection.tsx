@@ -19,7 +19,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-7xl font-space font-bold mb-6 gradient-text"
           >
-            Senior Full Stack Developer
+            Full Stack Developer
           </motion.h1>
           
           <motion.p

@@ -1,35 +1,78 @@
-
 import { motion } from 'framer-motion';
 
 const ExperienceTimeline = () => {
   const experiences = [
     {
       year: '2024',
-      role: 'Senior Full Stack Developer',
-      company: 'TechCorp Solutions',
-      description: 'Led development of microservices architecture serving 100K+ users. Implemented automated testing and CI/CD pipelines.',
-      tech: ['.NET Core', 'React', 'Docker', 'AWS']
+      role: 'Freelance Web Developer',
+      company: 'Upwork',
+      description:
+        'Delivered responsive web applications for clients in auto, legal tech, and e-commerce industries. Built frontend features, integrated REST APIs, and managed CI/CD workflows independently.',
+      tech: [
+        'React.js',
+        'Tailwind CSS',
+        'TypeScript',
+        'CI/CD',
+        'Figma',
+        'REST APIs',
+        'Docker'
+      ],
+    },
+    {
+      year: '2023',
+      role: 'Junior Developer',
+      company: 'Richards-Wilcox Canada',
+      description:
+        'Developed and maintained internal tools and APIs for order and discount management. Integrated database changes using Liquibase and contributed to CI/CD pipelines.',
+      tech: [
+        'C#',
+        '.NET Framework',
+        'SQL Server',
+        'Liquibase',
+        'AngularJS',
+        'HTML',
+        'CSS'
+      ],
     },
     {
       year: '2022',
-      role: 'Full Stack Developer',
-      company: 'Digital Innovations Inc.',
-      description: 'Built scalable e-commerce platform with real-time inventory management. Optimized database queries reducing load time by 60%.',
-      tech: ['Node.js', 'Vue.js', 'PostgreSQL', 'Redis']
+      role: 'Web Developer Intern',
+      company: 'Lumose Marketplace Inc.',
+      description:
+        'Built web interfaces and APIs for marketplace platform. Contributed to SEO optimization, responsive design, and third-party integration using Docker and Node.js.',
+      tech: [
+        'Node.js',
+        'React.js',
+        'MongoDB',
+        'Express',
+        'Tailwind CSS',
+        'Docker'
+      ],
     },
     {
       year: '2021',
-      role: 'Frontend Developer',
-      company: 'StartupX',
-      description: 'Developed responsive web applications and mobile-first designs. Collaborated with UX team to implement pixel-perfect interfaces.',
-      tech: ['React', 'TypeScript', 'Tailwind', 'Firebase']
+      role: 'Customer Service Rep (Bilingual)',
+      company: 'ClaimsPro LP',
+      description:
+        'Provided client support in English and French. Handled system-related inquiries and collaborated with internal tech teams to document feedback for improvement.',
+      tech: ['CRM', 'Ticketing Systems', 'Bilingual Support'],
     },
     {
       year: '2020',
-      role: 'Junior Developer',
-      company: 'CodeStart Academy',
-      description: 'Started journey in web development. Built foundational skills in modern JavaScript frameworks and backend technologies.',
-      tech: ['JavaScript', 'HTML/CSS', 'Node.js', 'MongoDB']
+      role: 'Technical Consultant',
+      company: 'OCDC',
+      description:
+        'Developed a custom landing page and advised clients on system implementation. Collaborated with stakeholders on requirements, testing, and software configuration.',
+      tech: [
+        'HTML',
+        'CSS3',
+        'React.js',
+        'SQL Server',
+        'Express.js',
+        'Client Onboarding',
+        'Troubleshooting',
+        'Documentation'
+      ],
     }
   ];
 
@@ -54,11 +97,11 @@ const ExperienceTimeline = () => {
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-purple-muted/30"></div>
-          
+
           <div className="space-y-8">
             {experiences.map((exp, index) => (
               <motion.div
-                key={exp.year}
+                key={`${exp.year}-${exp.company}`}
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}

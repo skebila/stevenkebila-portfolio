@@ -26,7 +26,7 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-6 text-text-secondary text-lg leading-relaxed">
               <p>
-                Senior Full Stack Developer with 4+ years of experience building scalable 
+                Full Stack Developer with 4+ years of experience building scalable 
                 web applications and robust backend systems. Specialized in creating clean, 
                 maintainable code that bridges the gap between complex business requirements 
                 and elegant user experiences.
@@ -37,8 +37,7 @@ const AboutSection = () => {
                 design, and staying current with emerging technologies.
               </p>
               <p>
-                When not coding, I contribute to open-source projects and mentor junior developers 
-                in modern web development practices.
+                When not coding, I contribute to open-source projects and and stay up to date with new tech trends.
               </p>
             </div>
           </div>
