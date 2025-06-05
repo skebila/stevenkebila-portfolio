@@ -58,15 +58,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom portfolio colors
-				'dark-bg': '#0F0F0F',
-				'dark-surface': '#1A1A1A',
-				'purple-muted': '#8B5CF6',
-				'blue-cool': '#3B82F6',
-				'green-muted': '#10B981',
-				'text-primary': '#FFFFFF',
-				'text-secondary': '#A1A1AA',
-				'text-tertiary': '#71717A',
+				// Custom portfolio colors using CSS variables
+				'dark-bg': 'var(--dark-bg)',
+				'dark-surface': 'var(--dark-surface)',
+				'purple-muted': 'var(--purple-muted)',
+				'blue-cool': 'var(--blue-cool)',
+				'green-muted': 'var(--green-muted)',
+				'text-primary': 'var(--text-primary)',
+				'text-secondary': 'var(--text-secondary)',
+				'text-tertiary': 'var(--text-tertiary)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

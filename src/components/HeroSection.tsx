@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Download, ExternalLink, Github } from 'lucide-react';
@@ -6,8 +5,8 @@ import { Download, ExternalLink, Github } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative terminal-bg overflow-hidden">
-      {/* Animated gradient background layer */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-cyan-800/10 to-black animate-pulse-glow"></div>
+      {/* Animated gradient background layer - updated for theme support */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-cyan-800/10 to-black dark:from-purple-900/10 dark:via-cyan-800/10 dark:to-black light:from-purple-200/20 light:via-cyan-200/20 light:to-white animate-pulse-glow"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
