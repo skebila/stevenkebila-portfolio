@@ -162,6 +162,7 @@
   .project-card {
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
   }
 
   .project-card:hover {
@@ -180,6 +181,38 @@
     border-color: #ECECEC !important;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
     transform: translateY(-4px);
+  }
+
+  /* Custom tabs styling */
+  .light [role="tablist"] {
+    background: #F9FAFB !important;
+    border: 1px solid #ECECEC !important;
+  }
+
+  .light [role="tab"] {
+    color: #666666 !important;
+    border-radius: 0 !important;
+  }
+
+  .light [role="tab"][data-state="active"] {
+    background: #5D3FD3 !important;
+    color: #FFFFFF !important;
+    border-bottom-color: #5D3FD3 !important;
+  }
+
+  .light [role="tab"]:hover:not([data-state="active"]) {
+    background: #F3F4F6 !important;
+    color: #5D3FD3 !important;
+  }
+
+  /* Dark theme tabs */
+  [role="tab"] {
+    border-radius: 0 !important;
+  }
+
+  [role="tab"]:hover:not([data-state="active"]) {
+    background: rgba(139, 92, 246, 0.1) !important;
+    color: #8B5CF6 !important;
   }
 
   .timeline-item::before {
