@@ -1,4 +1,3 @@
-
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
@@ -140,7 +139,7 @@ const ProjectsGrid = () => {
   );
 
   return (
-    <section className="py-20 bg-dark-surface light:bg-white">
+    <section id="projects-section" className="py-20 bg-dark-surface light:bg-white">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

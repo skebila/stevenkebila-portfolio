@@ -1,9 +1,18 @@
-
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Download, ExternalLink } from 'lucide-react';
 
 const HeroSection = () => {
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects-section');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative terminal-bg overflow-hidden">
       {/* Animated gradient background layer with theme-specific styling */}
@@ -62,6 +71,7 @@ const HeroSection = () => {
             <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
               <Button 
                 size="lg" 
+                onClick={scrollToProjects}
                 className="bg-purple-muted hover:bg-purple-muted/80 text-white border-0 px-8 py-4 text-lg font-medium transition-all duration-300 light:bg-[#5D3FD3] light:hover:bg-[#4A2FB8] light:text-white"
               >
                 <ExternalLink className="mr-2 h-5 w-5" />
