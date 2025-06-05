@@ -107,16 +107,16 @@ const TerminalOverlay = () => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="bg-dark-bg border border-purple-muted/30 w-full max-w-4xl h-[70vh] p-6 font-mono text-sm"
+            className="bg-dark-bg border border-purple-muted/30 w-full max-w-4xl h-[70vh] p-6 font-mono text-sm light:terminal-content light:border-gray-300"
           >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <Terminal className="h-5 w-5 text-purple-muted" />
-                <span className="text-purple-muted">dev-terminal</span>
+                <Terminal className="h-5 w-5 text-purple-muted light:text-purple-600" />
+                <span className="text-purple-muted light:text-purple-600">dev-terminal</span>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-text-secondary hover:text-text-primary"
+                className="text-text-secondary hover:text-text-primary light:text-gray-500 light:hover:text-gray-700"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -124,19 +124,19 @@ const TerminalOverlay = () => {
             
             <div className="h-[calc(100%-80px)] overflow-y-auto mb-4 space-y-1">
               {output.map((line, index) => (
-                <div key={index} className={line.startsWith('$') ? 'text-blue-cool' : 'text-text-secondary'}>
+                <div key={index} className={line.startsWith('$') ? 'text-blue-cool light:text-purple-600' : 'text-text-secondary light:text-gray-600'}>
                   {line}
                 </div>
               ))}
             </div>
             
             <form onSubmit={handleSubmit} className="flex items-center gap-2">
-              <span className="text-blue-cool">$</span>
+              <span className="text-blue-cool light:text-purple-600">$</span>
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                className="flex-1 bg-transparent border-none outline-none text-text-primary"
+                className="flex-1 bg-transparent border-none outline-none text-text-primary light:text-gray-800"
                 placeholder="Enter command..."
                 autoFocus
               />
