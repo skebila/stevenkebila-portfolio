@@ -19,11 +19,22 @@ const ThemeToggle = () => {
 
   const applyTheme = (newTheme: 'dark' | 'light') => {
     const root = window.document.documentElement;
+    const body = window.document.body;
+    
+    // Remove existing theme classes
+    root.classList.remove('light', 'dark');
+    body.classList.remove('light', 'dark');
+    
+    // Apply new theme classes
     if (newTheme === 'light') {
       root.classList.add('light');
+      body.classList.add('light');
     } else {
-      root.classList.remove('light');
+      root.classList.add('dark');
+      body.classList.add('dark');
     }
+    
+    console.log('Theme applied:', newTheme);
   };
 
   const toggleTheme = () => {
@@ -31,6 +42,7 @@ const ThemeToggle = () => {
     setTheme(newTheme);
     applyTheme(newTheme);
     localStorage.setItem('theme', newTheme);
+    console.log('Theme toggled to:', newTheme);
   };
 
   return (

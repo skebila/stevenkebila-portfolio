@@ -97,12 +97,23 @@
     @apply bg-background text-foreground font-inter;
   }
 
+  /* Force light theme styles when light class is present */
+  .light body {
+    background-color: #FCFCFC !important;
+    color: #1E1E1E !important;
+  }
+
+  /* Dark theme background */
+  body:not(.light) {
+    background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 100%);
+  }
+
   .terminal-bg {
     background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 100%);
   }
 
   .light .terminal-bg {
-    background: #FCFCFC;
+    background: #FCFCFC !important;
   }
 
   .gradient-text {
@@ -114,15 +125,15 @@
 
   .light .gradient-text {
     /* Remove gradient for light mode */
-    background: none;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: unset;
-    background-clip: unset;
-    color: #5D3FD3;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    background-clip: unset !important;
+    color: #5D3FD3 !important;
   }
 
   .light .gradient-text-coral {
-    color: #F46A4E;
+    color: #F46A4E !important;
   }
 
   .skill-tile {
@@ -137,14 +148,14 @@
   }
 
   .light .skill-tile {
-    border: 1px solid #ECECEC;
-    background: #FFFFFF;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ECECEC !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
   }
 
   .light .skill-tile:hover {
-    border-color: #ECECEC;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #ECECEC !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
     transform: translateY(-2px);
   }
 
@@ -160,14 +171,14 @@
   }
 
   .light .project-card {
-    border: 1px solid #ECECEC;
-    background: #FFFFFF;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #ECECEC !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
   }
 
   .light .project-card:hover {
-    border-color: #ECECEC;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: #ECECEC !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
     transform: translateY(-4px);
   }
 
@@ -183,8 +194,8 @@
   }
 
   .light .timeline-item::before {
-    background: #5D3FD3;
-    border: 3px solid #FFFFFF;
+    background: #5D3FD3 !important;
+    border: 3px solid #FFFFFF !important;
     box-shadow: 0 2px 4px rgba(93, 63, 211, 0.2);
   }
 
@@ -195,50 +206,67 @@
 
   .light .terminal-overlay {
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.95) !important;
   }
 
   /* Light mode terminal styling */
   .light .terminal-content {
-    background: #F9FAFB;
-    color: #1F2937;
-    border: 1px solid #E5E7EB;
+    background: #F9FAFB !important;
+    color: #1F2937 !important;
+    border: 1px solid #E5E7EB !important;
   }
 
   /* Tag colors for light mode */
   .light .tag-react {
-    color: #5D3FD3;
-    background-color: #EFEAFF;
-    border-color: #5D3FD3;
+    color: #5D3FD3 !important;
+    background-color: #EFEAFF !important;
+    border-color: #5D3FD3 !important;
   }
 
   .light .tag-docker {
-    color: #2CB1BC;
-    background-color: #E8FAFB;
-    border-color: #2CB1BC;
+    color: #2CB1BC !important;
+    background-color: #E8FAFB !important;
+    border-color: #2CB1BC !important;
   }
 
   .light .tag-dotnet {
-    color: #1E1E1E;
-    background-color: #EDEDED;
-    border-color: #1E1E1E;
+    color: #1E1E1E !important;
+    background-color: #EDEDED !important;
+    border-color: #1E1E1E !important;
   }
 
   .light .tag-node {
-    color: #059669;
-    background-color: #ECFDF5;
-    border-color: #059669;
+    color: #059669 !important;
+    background-color: #ECFDF5 !important;
+    border-color: #059669 !important;
   }
 
   .light .tag-typescript {
-    color: #3B82F6;
-    background-color: #EFF6FF;
-    border-color: #3B82F6;
+    color: #3B82F6 !important;
+    background-color: #EFF6FF !important;
+    border-color: #3B82F6 !important;
   }
 
   .light .tag-default {
-    color: #1E1E1E;
-    background-color: #F3F4F6;
-    border-color: #E5E7EB;
+    color: #1E1E1E !important;
+    background-color: #F3F4F6 !important;
+    border-color: #E5E7EB !important;
+  }
+
+  /* Force light theme text colors */
+  .light * {
+    color: inherit;
+  }
+
+  .light .text-text-primary {
+    color: #1E1E1E !important;
+  }
+
+  .light .text-text-secondary {
+    color: #666666 !important;
+  }
+
+  .light .text-text-tertiary {
+    color: #999999 !important;
   }
 }
