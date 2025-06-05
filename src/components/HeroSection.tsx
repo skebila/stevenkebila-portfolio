@@ -1,16 +1,13 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Download, ExternalLink, Github } from 'lucide-react';
+import { Download, ExternalLink } from 'lucide-react';
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative terminal-bg overflow-hidden">
       {/* Animated gradient background layer with theme-specific styling */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-cyan-800/10 to-black dark:from-purple-900/10 dark:via-cyan-800/10 dark:to-black light:from-purple-100/30 light:via-amber-50/40 light:to-blue-50/30 animate-pulse-glow"></div>
-      
-      {/* Light mode sun glow effect */}
-      <div className="light:sun-glow absolute inset-0 hidden light:block"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-cyan-800/10 to-black dark:from-purple-900/10 dark:via-cyan-800/10 dark:to-black light:bg-none"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -19,23 +16,24 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-space font-bold mb-4 gradient-text"
-          >
-            Full Stack Developer
-          </motion.h1>
-          
           <motion.p
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-sm md:text-base font-mono font-medium text-text-secondary/70 mb-6 tracking-widest uppercase light:italic light:text-gray-700"
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-sm md:text-base font-space font-bold text-text-secondary/70 mb-2 tracking-widest uppercase light:text-text-primary light:text-lg"
           >
             Steven Kebila 👨🏽‍💻
           </motion.p>
+          
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl md:text-7xl font-space font-bold mb-4"
+          >
+            <span className="gradient-text">Full Stack</span>{" "}
+            <span className="gradient-text light:gradient-text-coral">Developer</span>
+          </motion.h1>
           
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -61,20 +59,20 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <motion.div whileHover={{ y: -2, boxShadow: '0 8px 25px rgba(139, 92, 246, 0.3)' }}>
+            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
               <Button 
                 size="lg" 
-                className="bg-purple-muted hover:bg-purple-muted/80 text-white border-0 px-8 py-4 text-lg font-medium transition-all duration-300 light:bg-purple-600 light:hover:bg-purple-700 light:shadow-lg"
+                className="bg-purple-muted hover:bg-purple-muted/80 text-white border-0 px-8 py-4 text-lg font-medium transition-all duration-300 light:bg-[#5D3FD3] light:hover:bg-[#4A2FB8] light:text-white"
               >
                 <ExternalLink className="mr-2 h-5 w-5" />
                 Explore My Projects
               </Button>
             </motion.div>
-            <motion.div whileHover={{ y: -2, boxShadow: '0 8px 25px rgba(245, 158, 11, 0.3)' }}>
+            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-blue-cool text-blue-cool hover:bg-blue-cool hover:text-white px-8 py-4 text-lg font-medium transition-all duration-300 light:border-amber-500 light:text-amber-700 light:hover:bg-amber-500 light:hover:text-white light:bg-white light:shadow-lg"
+                className="border-blue-cool text-blue-cool hover:bg-blue-cool hover:text-white px-8 py-4 text-lg font-medium transition-all duration-300 light:bg-[#F46A4E] light:hover:bg-[#E55D4A] light:text-white light:border-[#F46A4E]"
               >
                 <Download className="mr-2 h-5 w-5" />
                 Grab My Resume
@@ -92,7 +90,7 @@ const HeroSection = () => {
       >
         <div className="text-text-tertiary text-xs md:text-sm font-mono flex items-center">
           Press "/" to open terminal — try commands like whoami, projects, resume
-          <span className="ml-1 animate-pulse text-purple-muted light:text-purple-600">|</span>
+          <span className="ml-1 animate-pulse text-purple-muted light:text-[#5D3FD3]">|</span>
         </div>
       </motion.div>
 
@@ -102,8 +100,7 @@ const HeroSection = () => {
         transition={{ duration: 1, delay: 1.2 }}
         className="absolute bottom-8 right-8 hidden md:flex items-center gap-2"
       >
-        <Github className="h-3 w-3 text-slate-600/50 light:text-gray-400" />
-        <span className="text-xs font-mono text-slate-600/50 light:text-gray-500 light:signature-text">
+        <span className="text-xs font-mono text-slate-600/50 light:text-gray-500">
           Made by Steven Kebila
         </span>
       </motion.div>

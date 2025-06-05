@@ -3,14 +3,31 @@ import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   const skills = [
-    '.NET Core', 'React', 'TypeScript', 'Node.js',
-    'PostgreSQL', 'MongoDB', 'Docker', 'AWS',
-    'Firebase', 'Git', 'VS Code', 'Postman',
-    'Redux', 'GraphQL', 'Microservices', 'CI/CD'
+    { name: '.NET Core', category: 'dotnet' },
+    { name: 'React', category: 'react' },
+    { name: 'TypeScript', category: 'typescript' },
+    { name: 'Node.js', category: 'node' },
+    { name: 'PostgreSQL', category: 'default' },
+    { name: 'MongoDB', category: 'default' },
+    { name: 'Docker', category: 'docker' },
+    { name: 'AWS', category: 'default' },
+    { name: 'Firebase', category: 'default' },
+    { name: 'Git', category: 'default' },
+    { name: 'VS Code', category: 'default' },
+    { name: 'Postman', category: 'default' },
+    { name: 'Redux', category: 'react' },
+    { name: 'GraphQL', category: 'default' },
+    { name: 'Microservices', category: 'default' },
+    { name: 'CI/CD', category: 'default' }
   ];
 
+  const getTagClasses = (category: string) => {
+    const baseClasses = "px-3 py-1 text-xs font-mono border transition-all duration-200";
+    return `${baseClasses} light:tag-${category}`;
+  };
+
   return (
-    <section className="py-20 bg-dark-surface">
+    <section className="py-20 bg-dark-surface light:bg-white">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -50,15 +67,15 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {skills.map((skill, index) => (
                 <motion.div
-                  key={skill}
+                  key={skill.name}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="skill-tile bg-dark-bg p-4 text-center"
+                  className="skill-tile bg-dark-bg p-4 text-center light:bg-white"
                 >
-                  <span className="text-text-primary font-medium text-sm">
-                    {skill}
+                  <span className={getTagClasses(skill.category)}>
+                    {skill.name}
                   </span>
                 </motion.div>
               ))}

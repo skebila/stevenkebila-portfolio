@@ -9,7 +9,7 @@ import Globe3D from './Globe3D';
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-dark-bg">
+    <section className="py-20 bg-dark-bg light:bg-[#FCFCFC]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,7 +42,7 @@ const ContactSection = () => {
                 </label>
                 <Input 
                   placeholder="Your name"
-                  className="bg-dark-surface border-purple-muted/30 text-text-primary placeholder-text-tertiary focus:border-purple-muted"
+                  className="bg-dark-surface border-purple-muted/30 text-text-primary placeholder-text-tertiary focus:border-purple-muted light:bg-white light:border-[#ECECEC] light:focus:border-[#5D3FD3]"
                 />
               </div>
               <div>
@@ -52,7 +52,7 @@ const ContactSection = () => {
                 <Input 
                   type="email"
                   placeholder="your.email@example.com"
-                  className="bg-dark-surface border-purple-muted/30 text-text-primary placeholder-text-tertiary focus:border-purple-muted"
+                  className="bg-dark-surface border-purple-muted/30 text-text-primary placeholder-text-tertiary focus:border-purple-muted light:bg-white light:border-[#ECECEC] light:focus:border-[#5D3FD3]"
                 />
               </div>
             </div>
@@ -63,7 +63,7 @@ const ContactSection = () => {
               </label>
               <Input 
                 placeholder="Project inquiry / Collaboration"
-                className="bg-dark-surface border-purple-muted/30 text-text-primary placeholder-text-tertiary focus:border-purple-muted"
+                className="bg-dark-surface border-purple-muted/30 text-text-primary placeholder-text-tertiary focus:border-purple-muted light:bg-white light:border-[#ECECEC] light:focus:border-[#5D3FD3]"
               />
             </div>
             
@@ -74,13 +74,13 @@ const ContactSection = () => {
               <Textarea 
                 placeholder="Tell me about your project..."
                 rows={6}
-                className="bg-dark-surface border-purple-muted/30 text-text-primary placeholder-text-tertiary focus:border-purple-muted resize-none"
+                className="bg-dark-surface border-purple-muted/30 text-text-primary placeholder-text-tertiary focus:border-purple-muted resize-none light:bg-white light:border-[#ECECEC] light:focus:border-[#5D3FD3]"
               />
             </div>
             
             <Button 
               size="lg"
-              className="w-full bg-gradient-to-r from-purple-muted to-blue-cool hover:from-purple-muted/80 hover:to-blue-cool/80 text-white border-0"
+              className="w-full bg-gradient-to-r from-purple-muted to-blue-cool hover:from-purple-muted/80 hover:to-blue-cool/80 text-white border-0 light:bg-[#5D3FD3] light:hover:bg-[#4A2FB8] light:from-[#5D3FD3] light:to-[#5D3FD3]"
             >
               <Send className="mr-2 h-5 w-5" />
               Send Message
@@ -97,7 +97,7 @@ const ContactSection = () => {
                       href="https://www.linkedin.com/in/steven-kebila"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center w-12 h-12 bg-dark-surface border border-purple-muted/30 text-text-primary hover:border-purple-muted hover:text-purple-muted transition-all duration-300"
+                      className="inline-flex items-center justify-center w-12 h-12 bg-dark-surface border border-purple-muted/30 text-text-primary hover:border-purple-muted hover:text-purple-muted transition-all duration-300 light:bg-white light:border-[#ECECEC] light:text-[#5D3FD3] light:hover:border-[#5D3FD3]"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -113,7 +113,7 @@ const ContactSection = () => {
                   <TooltipTrigger asChild>
                     <motion.a
                       href="mailto:steven@launchab.com"
-                      className="inline-flex items-center justify-center w-12 h-12 bg-dark-surface border border-purple-muted/30 text-text-primary hover:border-purple-muted hover:text-purple-muted transition-all duration-300"
+                      className="inline-flex items-center justify-center w-12 h-12 bg-dark-surface border border-purple-muted/30 text-text-primary hover:border-purple-muted hover:text-purple-muted transition-all duration-300 light:bg-white light:border-[#ECECEC] light:text-[#5D3FD3] light:hover:border-[#5D3FD3]"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >

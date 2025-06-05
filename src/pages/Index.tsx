@@ -9,7 +9,7 @@ import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-dark-bg text-text-primary">
+    <div className="min-h-screen bg-dark-bg text-text-primary light:bg-[#FCFCFC]">
       <ThemeToggle />
       <TerminalOverlay />
       
@@ -20,7 +20,7 @@ const Index = () => {
       <ContactSection />
       
       {/* Footer */}
-      <footer className="py-8 bg-dark-surface border-t border-purple-muted/20">
+      <footer className="py-8 bg-dark-surface border-t border-purple-muted/20 light:bg-white light:border-[#ECECEC]">
         <div className="container mx-auto px-6 text-center">
           <p className="text-text-tertiary font-mono text-sm">
             © 2025 Full Stack Developer. Built with React & TypeScript.

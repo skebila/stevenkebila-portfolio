@@ -8,7 +8,12 @@ const ProjectsGrid = () => {
     {
       title: 'E-Commerce Platform',
       description: 'Full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+      tech: [
+        { name: 'React', category: 'react' },
+        { name: 'Node.js', category: 'node' },
+        { name: 'PostgreSQL', category: 'default' },
+        { name: 'Stripe', category: 'default' }
+      ],
       image: '/placeholder.svg',
       liveUrl: '#',
       codeUrl: '#'
@@ -16,7 +21,12 @@ const ProjectsGrid = () => {
     {
       title: 'Task Management API',
       description: 'RESTful API with authentication, real-time updates, and comprehensive documentation.',
-      tech: ['.NET Core', 'SignalR', 'MongoDB', 'Docker'],
+      tech: [
+        { name: '.NET Core', category: 'dotnet' },
+        { name: 'SignalR', category: 'default' },
+        { name: 'MongoDB', category: 'default' },
+        { name: 'Docker', category: 'docker' }
+      ],
       image: '/placeholder.svg',
       liveUrl: '#',
       codeUrl: '#'
@@ -24,7 +34,12 @@ const ProjectsGrid = () => {
     {
       title: 'Real-time Chat App',
       description: 'Scalable chat application with rooms, file sharing, and message encryption.',
-      tech: ['Vue.js', 'Socket.io', 'Redis', 'AWS S3'],
+      tech: [
+        { name: 'Vue.js', category: 'default' },
+        { name: 'Socket.io', category: 'default' },
+        { name: 'Redis', category: 'default' },
+        { name: 'AWS S3', category: 'default' }
+      ],
       image: '/placeholder.svg',
       liveUrl: '#',
       codeUrl: '#'
@@ -32,7 +47,12 @@ const ProjectsGrid = () => {
     {
       title: 'DevOps Dashboard',
       description: 'Monitoring dashboard for CI/CD pipelines with real-time metrics and alerts.',
-      tech: ['React', 'TypeScript', 'GraphQL', 'Docker'],
+      tech: [
+        { name: 'React', category: 'react' },
+        { name: 'TypeScript', category: 'typescript' },
+        { name: 'GraphQL', category: 'default' },
+        { name: 'Docker', category: 'docker' }
+      ],
       image: '/placeholder.svg',
       liveUrl: '#',
       codeUrl: '#'
@@ -40,7 +60,12 @@ const ProjectsGrid = () => {
     {
       title: 'Analytics Service',
       description: 'Microservice for data processing and analytics with high-performance APIs.',
-      tech: ['Python', 'FastAPI', 'PostgreSQL', 'Celery'],
+      tech: [
+        { name: 'Python', category: 'default' },
+        { name: 'FastAPI', category: 'default' },
+        { name: 'PostgreSQL', category: 'default' },
+        { name: 'Celery', category: 'default' }
+      ],
       image: '/placeholder.svg',
       liveUrl: '#',
       codeUrl: '#'
@@ -48,15 +73,25 @@ const ProjectsGrid = () => {
     {
       title: 'Mobile PWA',
       description: 'Progressive web app with offline capabilities and native mobile features.',
-      tech: ['React', 'PWA', 'IndexedDB', 'Workbox'],
+      tech: [
+        { name: 'React', category: 'react' },
+        { name: 'PWA', category: 'default' },
+        { name: 'IndexedDB', category: 'default' },
+        { name: 'Workbox', category: 'default' }
+      ],
       image: '/placeholder.svg',
       liveUrl: '#',
       codeUrl: '#'
     }
   ];
 
+  const getTagClasses = (category: string) => {
+    const baseClasses = "px-2 py-1 text-xs font-mono border transition-all duration-200";
+    return `${baseClasses} light:tag-${category}`;
+  };
+
   return (
-    <section className="py-20 bg-dark-surface">
+    <section className="py-20 bg-dark-surface light:bg-white">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -81,9 +116,9 @@ const ProjectsGrid = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="project-card bg-dark-bg p-6 h-full flex flex-col"
+              className="project-card bg-dark-bg p-6 h-full flex flex-col light:bg-white"
             >
-              <div className="aspect-video bg-dark-surface mb-4 flex items-center justify-center border border-purple-muted/20">
+              <div className="aspect-video bg-dark-surface mb-4 flex items-center justify-center border border-purple-muted/20 light:bg-[#F9FAFB] light:border-[#ECECEC]">
                 <span className="text-text-tertiary font-mono text-sm">
                   {project.title}
                 </span>
@@ -100,10 +135,10 @@ const ProjectsGrid = () => {
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech) => (
                   <span
-                    key={tech}
-                    className="px-2 py-1 bg-dark-surface text-blue-cool text-xs font-mono border border-blue-cool/30"
+                    key={tech.name}
+                    className={getTagClasses(tech.category)}
                   >
-                    {tech}
+                    {tech.name}
                   </span>
                 ))}
               </div>
@@ -111,7 +146,7 @@ const ProjectsGrid = () => {
               <div className="flex gap-3">
                 <Button
                   size="sm"
-                  className="flex-1 bg-purple-muted hover:bg-purple-muted/80 text-white border-0"
+                  className="flex-1 bg-purple-muted hover:bg-purple-muted/80 text-white border-0 light:bg-[#5D3FD3] light:hover:bg-[#4A2FB8]"
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
                   Live Demo
@@ -119,7 +154,7 @@ const ProjectsGrid = () => {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="flex-1 border-green-muted text-green-muted hover:bg-green-muted hover:text-white"
+                  className="flex-1 border-green-muted text-green-muted hover:bg-green-muted hover:text-white light:border-[#2CB1BC] light:text-[#2CB1BC] light:hover:bg-[#2CB1BC] light:hover:text-white"
                 >
                   <Github className="mr-2 h-4 w-4" />
                   Code

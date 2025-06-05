@@ -75,15 +75,15 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 262 83% 58%;
 
-    /* Sunset Light theme custom colors */
-    --dark-bg: linear-gradient(135deg, #FDF2F8 0%, #FAF3E0 50%, #E4F0FF 100%);
+    /* Sunset Light theme custom colors - Minimal + Colorful */
+    --dark-bg: #FCFCFC;
     --dark-surface: #FFFFFF;
-    --purple-muted: #9333EA;
-    --blue-cool: #F59E0B;
-    --green-muted: #059669;
-    --text-primary: #111827;
-    --text-secondary: #4B5563;
-    --text-tertiary: #6B7280;
+    --purple-muted: #5D3FD3;
+    --blue-cool: #2CB1BC;
+    --green-muted: #F46A4E;
+    --text-primary: #1E1E1E;
+    --text-secondary: #666666;
+    --text-tertiary: #999999;
   }
 }
 
@@ -102,7 +102,7 @@
   }
 
   .light .terminal-bg {
-    background: linear-gradient(135deg, #FDF2F8 0%, #FAF3E0 50%, #E4F0FF 100%);
+    background: #FCFCFC;
   }
 
   .gradient-text {
@@ -113,10 +113,16 @@
   }
 
   .light .gradient-text {
-    background: linear-gradient(135deg, #9333EA 0%, #F59E0B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    /* Remove gradient for light mode */
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+    color: #5D3FD3;
+  }
+
+  .light .gradient-text-coral {
+    color: #F46A4E;
   }
 
   .skill-tile {
@@ -131,14 +137,14 @@
   }
 
   .light .skill-tile {
-    border: 1px solid rgba(229, 231, 235, 0.8);
+    border: 1px solid #ECECEC;
     background: #FFFFFF;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
   .light .skill-tile:hover {
-    border-color: rgba(147, 51, 234, 0.4);
-    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.15);
+    border-color: #ECECEC;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
   }
 
@@ -154,14 +160,14 @@
   }
 
   .light .project-card {
-    border: 1px solid rgba(229, 231, 235, 0.8);
+    border: 1px solid #ECECEC;
     background: #FFFFFF;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   }
 
   .light .project-card:hover {
-    border-color: rgba(147, 51, 234, 0.3);
-    box-shadow: 0 8px 25px rgba(147, 51, 234, 0.15);
+    border-color: #ECECEC;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transform: translateY(-4px);
   }
 
@@ -177,9 +183,9 @@
   }
 
   .light .timeline-item::before {
-    background: #9333EA;
+    background: #5D3FD3;
     border: 3px solid #FFFFFF;
-    box-shadow: 0 2px 4px rgba(147, 51, 234, 0.2);
+    box-shadow: 0 2px 4px rgba(93, 63, 211, 0.2);
   }
 
   .terminal-overlay {
@@ -194,36 +200,45 @@
 
   /* Light mode terminal styling */
   .light .terminal-content {
-    background: #F3F4F6;
+    background: #F9FAFB;
     color: #1F2937;
     border: 1px solid #E5E7EB;
   }
 
-  /* Signature style for light mode */
-  .light .signature-text {
-    font-family: 'Brush Script MT', cursive;
-    font-style: italic;
+  /* Tag colors for light mode */
+  .light .tag-react {
+    color: #5D3FD3;
+    background-color: #EFEAFF;
+    border-color: #5D3FD3;
   }
 
-  /* Sun glow animation for light mode */
-  .light .sun-glow {
-    position: relative;
+  .light .tag-docker {
+    color: #2CB1BC;
+    background-color: #E8FAFB;
+    border-color: #2CB1BC;
   }
 
-  .light .sun-glow::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
-    animation: sun-pulse 4s ease-in-out infinite;
-    pointer-events: none;
+  .light .tag-dotnet {
+    color: #1E1E1E;
+    background-color: #EDEDED;
+    border-color: #1E1E1E;
   }
 
-  @keyframes sun-pulse {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.1); }
+  .light .tag-node {
+    color: #059669;
+    background-color: #ECFDF5;
+    border-color: #059669;
+  }
+
+  .light .tag-typescript {
+    color: #3B82F6;
+    background-color: #EFF6FF;
+    border-color: #3B82F6;
+  }
+
+  .light .tag-default {
+    color: #1E1E1E;
+    background-color: #F3F4F6;
+    border-color: #E5E7EB;
   }
 }
