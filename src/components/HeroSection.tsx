@@ -1,12 +1,13 @@
+
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Download, ExternalLink } from 'lucide-react';
+import { Download, User } from 'lucide-react';
 
 const HeroSection = () => {
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects-section');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ 
+  const scrollToAbout = () => {
+    const aboutSection = document.querySelector('#about-section');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
       });
@@ -71,11 +72,11 @@ const HeroSection = () => {
             <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
               <Button 
                 size="lg" 
-                onClick={scrollToProjects}
+                onClick={scrollToAbout}
                 className="bg-purple-muted hover:bg-purple-muted/80 text-white border-0 px-8 py-4 text-lg font-medium transition-all duration-300 light:bg-[#5D3FD3] light:hover:bg-[#4A2FB8] light:text-white"
               >
-                <ExternalLink className="mr-2 h-5 w-5" />
-                Explore My Projects
+                <User className="mr-2 h-5 w-5" />
+                Learn About Me
               </Button>
             </motion.div>
             <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
@@ -99,7 +100,7 @@ const HeroSection = () => {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <div className="text-text-tertiary text-xs md:text-sm font-mono flex items-center">
-          Press "/" to open terminal — try commands like whoami, projects, resume
+          Press "/" to open terminal — try commands like whoami, experience, resume
           <span className="ml-1 animate-pulse text-purple-muted light:text-[#5D3FD3]">|</span>
         </div>
       </motion.div>

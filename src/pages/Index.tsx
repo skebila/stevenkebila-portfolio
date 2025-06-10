@@ -4,7 +4,6 @@ import TerminalOverlay from '@/components/TerminalOverlay';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ExperienceTimeline from '@/components/ExperienceTimeline';
-import ProjectsGrid from '@/components/ProjectsGrid';
 import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
@@ -16,7 +15,6 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <ExperienceTimeline />
-      <ProjectsGrid />
       <ContactSection />
       
       {/* Footer */}
