@@ -50,18 +50,6 @@ const ExperienceTimeline = () => {
       ],
     },
     {
-      year: 'Sep 2021 - May 2022',
-      role: 'Customer Service Rep (Bilingual)',
-      company: 'ClaimsPro LP',
-      description:
-        'Provided client support in English and French. Handled system-related inquiries and collaborated with internal tech teams to document feedback for improvement.',
-      tech: [
-        { name: 'CRM', category: 'default' },
-        { name: 'Ticketing Systems', category: 'default' },
-        { name: 'Bilingual Support', category: 'default' }
-      ],
-    },
-    {
       year: 'Jan 2019 - Mar 2021',
       role: 'Technical Consultant',
       company: 'OCDC',
