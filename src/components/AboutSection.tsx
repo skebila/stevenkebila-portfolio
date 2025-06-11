@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 
 const AboutSection = () => {
@@ -27,7 +26,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="py-20 bg-dark-surface light:bg-white">
+    <section id="about-section" className="py-20 bg-dark-surface light:bg-white">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

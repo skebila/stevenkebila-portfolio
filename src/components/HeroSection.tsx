@@ -14,6 +14,10 @@ const HeroSection = () => {
     }
   };
 
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com/in/steven-kebila', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative terminal-bg overflow-hidden">
       {/* Animated gradient background layer with theme-specific styling */}
@@ -83,6 +87,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg"
+                onClick={openLinkedIn}
                 className="border-blue-cool text-blue-cool hover:bg-blue-cool hover:text-white px-8 py-4 text-lg font-medium transition-all duration-300 light:bg-[#F46A4E] light:hover:bg-[#E55D4A] light:text-white light:border-[#F46A4E]"
               >
                 <Download className="mr-2 h-5 w-5" />
