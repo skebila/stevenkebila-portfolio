@@ -1,10 +1,9 @@
-
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { Send, Linkedin, Mail } from 'lucide-react';
+import { Send, Linkedin, Mail, Github } from 'lucide-react';
 import Globe3D from './Globe3D';
 
 const ContactSection = () => {
@@ -91,6 +90,24 @@ const ContactSection = () => {
                 Or connect with me directly:
               </p>
               <div className="flex justify-center space-x-4">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <motion.a
+                      href="https://github.com/skebila"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-12 h-12 bg-dark-surface border border-purple-muted/30 text-text-primary hover:border-purple-muted hover:text-purple-muted transition-all duration-300 light:bg-white light:border-[#ECECEC] light:text-[#5D3FD3] light:hover:border-[#5D3FD3]"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Github className="h-5 w-5" />
+                    </motion.a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p className="font-mono">GitHub</p>
+                  </TooltipContent>
+                </Tooltip>
+
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <motion.a
