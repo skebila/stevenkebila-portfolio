@@ -1,0 +1,50 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  /* Force light theme styles when light class is present */
+  .light body {
+    background-color: #FCFCFC !important;
+    color: #1E1E1E !important;
+  }
+
+  /* Dark theme background */
+  body:not(.light) {
+    background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 100%);
+  }
+
+  .terminal-bg {
+    background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 100%);
+  }
+
+  .light .terminal-bg {
+    background: #FCFCFC !important;
+    position: relative;
+  }
+
+  /* Add subtle design touch for light mode hero */
+  .light .terminal-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(93, 63, 211, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(244, 106, 78, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 60%, rgba(44, 177, 188, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+  }
+}
