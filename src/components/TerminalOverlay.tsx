@@ -40,7 +40,8 @@ const TerminalOverlay = () => {
     whoami: () => [
       'Senior Full Stack Developer',
       '4+ years of experience',
-      'Building scalable applications with clean code'
+      'Building scalable applications with clean code',
+      'loves tennis, arts, live music...'
     ],
     'ls projects': () => [
       'project1/  E-Commerce Platform    [React, Node.js, MongoDB]',
@@ -50,16 +51,16 @@ const TerminalOverlay = () => {
     ],
     'cat resume.txt': () => [
       '=== RESUME ===',
-      'Senior Full Stack Developer',
+      'Full Stack Developer',
       'Experience: 4+ years',
       'Specialties: API Design, Frontend Architecture, DevOps',
       'Technologies: .NET, React, Firebase, Docker, AWS',
-      'Contact: portfolio@developer.com'
+      'Contact: info@stevenkebila.com'
     ],
     skills: () => [
       'Backend: .NET Core, Node.js, Python, PostgreSQL, MongoDB',
-      'Frontend: React, Vue.js, TypeScript, Tailwind CSS',
-      'Tools: Docker, Git, VS Code, Postman, Firebase',
+      'Frontend: React, Vue.js, JavaScript, TypeScript, HTML/CSS, Tailwind CSS',
+      'Tools: Docker, Kubernetes, Git, VS Code, Postman, Firebase',
       'Cloud: AWS, Azure, Vercel, Netlify'
     ],
     clear: () => [],
