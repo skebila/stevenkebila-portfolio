@@ -14,8 +14,8 @@ const HeroSection = () => {
     }
   };
 
-  const openLinkedIn = () => {
-    window.open('https://www.linkedin.com/in/steven-kebila', '_blank', 'noopener,noreferrer');
+  const openResume = () => {
+    window.open('https://sheridanc-my.sharepoint.com/personal/kuatewaf_shernet_sheridancollege_ca/_layouts/15/Doc.aspx?sourcedoc={fda1d42a-ab0d-4c24-9dbc-c5d84d44cdcb}&action=embedview', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -87,7 +87,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                onClick={openLinkedIn}
+                onClick={openResume}
                 className="border-blue-cool text-blue-cool hover:bg-blue-cool hover:text-white px-8 py-4 text-lg font-medium transition-all duration-300 light:bg-[#F46A4E] light:hover:bg-[#E55D4A] light:text-white light:border-[#F46A4E]"
               >
                 <Download className="mr-2 h-5 w-5" />
