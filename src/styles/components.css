@@ -8,16 +8,18 @@
   }
 
   .light .gradient-text {
-    /* Remove gradient for light mode */
-    background: none !important;
-    -webkit-background-clip: unset !important;
-    -webkit-text-fill-color: unset !important;
-    background-clip: unset !important;
-    color: #5D3FD3 !important;
+    /* Enhanced gradient for light mode */
+    background: linear-gradient(135deg, #5D3FD3 0%, #7C3AED 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
   }
 
   .light .gradient-text-coral {
-    color: #F46A4E !important;
+    background: linear-gradient(135deg, #F46A4E 0%, #EF4444 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
   }
 
   .skill-tile {
