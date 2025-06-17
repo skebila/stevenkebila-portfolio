@@ -4,7 +4,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 
 const ProjectsGrid = () => {
   const projects = {
-    'frontend': [
+    'personal': [
       {
         title: 'Trackflo',
         description: 'Modern, developer-focused project and team management app inspired by tools like Linear, Notion, and Trello ',
@@ -17,9 +17,35 @@ const ProjectsGrid = () => {
         ],
         liveUrl: 'https://trackflo.netlify.app/',
         codeUrl: 'https://github.com/skebila/trackflo.git'
+      },
+      {
+        title: 'My Portfolio',
+        description: 'Full-stack portfolio website showcasing my work and skills',
+        tech: [
+          { name: 'React', category: 'react' },
+          { name: 'Vite', category: 'default' },
+          { name: 'Tailwind CSS', category: 'default' },
+          { name: 'TypeScript', category: 'typescript' },
+          { name: 'Framer Motion', category: 'default' },
+          { name: 'Netlify', category: 'default' }
+        ],
+        liveUrl: 'https://stevenkebila.com/',
+        codeUrl: 'https://github.com/skebila/stevenkebila-portfolio.git'
+      },
+      {
+        title: 'Student Haven',
+        description: 'Student Social Media Platform (This was my capstone project)',
+        tech: [
+          { name: 'React', category: 'react' },
+          { name: 'Node.js', category: 'node' },
+          { name: 'Google Cloud', category: 'default' },
+          { name: 'Docker', category: 'docker' }
+        ],
+        liveUrl: '#',
+        codeUrl: 'https://github.com/skebila/student-haven.git'
       }
     ],
-    'backend': [
+    'freelance': [
       // {
       //   title: 'WorkflowCentral',
       //   description: 'Admin tool for managing internal requests',
@@ -45,19 +71,8 @@ const ProjectsGrid = () => {
       //   codeUrl: '#'
       // }
     ],
-    'full-stack': [
-      {
-        title: 'Student Haven',
-        description: 'Student Social Media Platform (This was my capstone project)',
-        tech: [
-          { name: 'React', category: 'react' },
-          { name: 'Node.js', category: 'node' },
-          { name: 'Google Cloud', category: 'default' },
-          { name: 'Docker', category: 'docker' }
-        ],
-        liveUrl: '#',
-        codeUrl: 'https://github.com/skebila/student-haven.git'
-      },
+    'enterprise': [
+      
     ]
   };
 
@@ -135,26 +150,26 @@ const ProjectsGrid = () => {
           </p>
         </motion.div>
 
-        <Tabs defaultValue="frontend" className="w-full">
+        <Tabs defaultValue="personal" className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-8 bg-dark-bg border border-purple-muted/20 light:bg-[#F9FAFB] light:border-[#ECECEC] rounded-none p-1">
             <TabsTrigger 
-              value="frontend" 
+              value="personal" 
               className="font-mono text-sm data-[state=active]:bg-purple-muted data-[state=active]:text-white light:data-[state=active]:bg-[#5D3FD3] light:data-[state=active]:text-white rounded-none border-b-2 border-transparent data-[state=active]:border-purple-muted light:data-[state=active]:border-[#5D3FD3] transition-all duration-200"
             >
-              Frontend
+              Personal
             </TabsTrigger>
             <TabsTrigger 
-              value="backend" 
+              value="freelance" 
               className="font-mono text-sm data-[state=active]:bg-purple-muted data-[state=active]:text-white light:data-[state=active]:bg-[#5D3FD3] light:data-[state=active]:text-white rounded-none border-b-2 border-transparent data-[state=active]:border-purple-muted light:data-[state=active]:border-[#5D3FD3] transition-all duration-200"
             >
-              Backend/Admin
+              Freelance
             </TabsTrigger>
-            <TabsTrigger 
-              value="full-stack" 
+            {/* <TabsTrigger 
+              value="enterprise" 
               className="font-mono text-sm data-[state=active]:bg-purple-muted data-[state=active]:text-white light:data-[state=active]:bg-[#5D3FD3] light:data-[state=active]:text-white rounded-none border-b-2 border-transparent data-[state=active]:border-purple-muted light:data-[state=active]:border-[#5D3FD3] transition-all duration-200"
             >
-              Full-Stack
-            </TabsTrigger>
+              Enterprise
+            </TabsTrigger> */}
           </TabsList>
 
           <TabsContent value="full-stack" className="mt-0">
