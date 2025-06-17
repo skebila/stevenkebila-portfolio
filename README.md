@@ -87,15 +87,6 @@ App will run at:
 
 ---
 
-## 🔮 Planned Updates
-
-- ✍️ Add blog/notes section with writing samples
-- 📸 Add case studies for Room808, Launchab, and Trackflo
-- 🌍 Add dark/light mode toggle
-- 📊 Add analytics integration
-
----
-
 ## 📇 Contact
 
 Feel free to reach out via:
