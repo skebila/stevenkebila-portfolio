@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Menu, X, Code, User, Briefcase, FolderOpen, Mail } from 'lucide-react';
+import { Menu, X, Code, User, FolderOpen, Mail } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,8 @@ const Navigation = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const offset = element.getBoundingClientRect().top + window.scrollY - 80; // Adjust for fixed navbar height
+      window.scrollTo({ top: offset, behavior: 'smooth' });
       setIsOpen(false); // Close the mobile menu after scrolling
     } else {
       console.error(`Section with ID ${href} not found.`);
