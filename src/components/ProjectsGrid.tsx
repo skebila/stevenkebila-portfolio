@@ -172,47 +172,47 @@ const ProjectsGrid = () => {
             </TabsTrigger> */}
           </TabsList>
 
-          <TabsContent value="full-stack" className="mt-0">
+          <TabsContent value="personal" className="mt-0">
             <AnimatePresence mode="wait">
               <motion.div
-                key="full-stack"
+                key="personal"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
               >
-                {projects['full-stack'].map((project, index) => renderProjectCard(project, index))}
+                {projects['personal'].map((project, index) => renderProjectCard(project, index))}
               </motion.div>
             </AnimatePresence>
           </TabsContent>
 
-          <TabsContent value="frontend" className="mt-0">
+          <TabsContent value="freelance" className="mt-0">
             <AnimatePresence mode="wait">
               <motion.div
-                key="frontend"
+                key="freelance"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
               >
-                {projects['frontend'].map((project, index) => renderProjectCard(project, index))}
+                {projects['freelance'].map((project, index) => renderProjectCard(project, index))}
               </motion.div>
             </AnimatePresence>
           </TabsContent>
 
-          <TabsContent value="backend" className="mt-0">
+          <TabsContent value="enterprise" className="mt-0">
             <AnimatePresence mode="wait">
               <motion.div
-                key="backend"
+                key="enterprise"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
               >
-                {projects['backend'].map((project, index) => renderProjectCard(project, index))}
+                {projects['enterprise'].map((project, index) => renderProjectCard(project, index))}
               </motion.div>
             </AnimatePresence>
           </TabsContent>
