@@ -31,14 +31,14 @@ const TerminalOverlay = () => {
     help: () => [
       'Available commands:',
       '  whoami      - Display user information',
-      '  ls projects - List all projects',
+      // '  ls projects - List all projects',
       '  cat resume.txt - Display resume',
       '  skills      - Show technical skills',
       '  clear       - Clear terminal',
       '  exit        - Close terminal'
     ],
     whoami: () => [
-      'Senior Full Stack Developer',
+      'Full Stack Developer',
       '4+ years of experience',
       'Building scalable applications with clean code',
       'loves tennis, arts, live music...'
