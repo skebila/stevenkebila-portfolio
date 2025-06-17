@@ -46,17 +46,17 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <motion.a
+              <motion.button
                 key={item.name}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                href={item.href}
+                onClick={() => scrollToSection(item.href)}
                 className="flex items-center space-x-2 text-text-secondary hover:text-text-primary font-mono text-sm transition-colors duration-200 light:text-gray-600 light:hover:text-[#5D3FD3]"
               >
                 <item.icon className="h-4 w-4" />
                 <span>{item.name}</span>
-              </motion.a>
+              </motion.button>
             ))}
             
             {/* Terminal indicator */}
@@ -85,19 +85,15 @@ const Navigation = () => {
         >
           <div className="py-4 space-y-4 border-t border-purple-muted/20 light:border-[#ECECEC]">
             {navItems.map((item) => (
-              <motion.a
+              <motion.button
                 key={item.name}
                 whileHover={{ x: 4 }}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault(); // Prevent default anchor behavior
-                  scrollToSection(item.href); // Smooth scroll
-                }}
+                onClick={() => scrollToSection(item.href)}
                 className="flex items-center space-x-3 text-text-secondary hover:text-text-primary font-mono text-sm transition-colors duration-200 w-full text-left light:text-gray-600 light:hover:text-[#5D3FD3]"
               >
                 <item.icon className="h-4 w-4" />
                 <span>{item.name}</span>
-              </motion.a>
+              </motion.button>
             ))}
           </div>
         </motion.div>
