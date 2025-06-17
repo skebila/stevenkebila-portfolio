@@ -46,42 +46,18 @@ const ProjectsGrid = () => {
       // }
     ],
     'full-stack': [
-      // {
-      //   title: 'ClearForms',
-      //   description: 'HR form manager with approval tracking',
-      //   tech: [
-      //     { name: 'React', category: 'react' },
-      //     { name: 'Node.js', category: 'node' },
-      //     { name: 'PostgreSQL', category: 'default' },
-      //     { name: 'Docker', category: 'docker' }
-      //   ],
-      //   liveUrl: '#',
-      //   codeUrl: '#'
-      // },
-      // {
-      //   title: 'StockVision',
-      //   description: 'Inventory dashboard with sales insights',
-      //   tech: [
-      //     { name: 'React', category: 'react' },
-      //     { name: '.NET Core', category: 'dotnet' },
-      //     { name: 'SQL Server', category: 'default' },
-      //     { name: 'Redis', category: 'default' }
-      //   ],
-      //   liveUrl: '#',
-      //   codeUrl: '#'
-      // },
-      // {
-      //   title: 'LaunchFlow',
-      //   description: 'CI/CD monitoring tool for dev teams',
-      //   tech: [
-      //     { name: 'Vue.js', category: 'default' },
-      //     { name: 'Node.js', category: 'node' },
-      //     { name: 'MongoDB', category: 'default' },
-      //     { name: 'Docker', category: 'docker' }
-      //   ],
-      //   liveUrl: '#',
-      //   codeUrl: '#'
-      // }
+      {
+        title: 'Student Haven',
+        description: 'Student Social Media Platform (This was my capstone project)',
+        tech: [
+          { name: 'React', category: 'react' },
+          { name: 'Node.js', category: 'node' },
+          { name: 'Google Cloud', category: 'default' },
+          { name: 'Docker', category: 'docker' }
+        ],
+        liveUrl: '#',
+        codeUrl: 'https://github.com/skebila/student-haven.git'
+      },
     ]
   };
 
