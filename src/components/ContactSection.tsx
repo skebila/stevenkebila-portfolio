@@ -8,7 +8,7 @@ import Globe3D from './Globe3D';
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-dark-bg light:bg-[#FCFCFC]">
+    <section id="contact-section" className="py-20 bg-dark-bg light:bg-[#FCFCFC]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

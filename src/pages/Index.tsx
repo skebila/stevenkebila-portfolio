@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-dark-bg text-text-primary light:bg-[#FCFCFC]">
       <Navigation />
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
       <TerminalOverlay />
       
       <div className="pt-16">
