@@ -1,73 +1,103 @@
-# Welcome to your Lovable project
+# 🧑‍💻 Steven Kebila – Developer Portfolio
 
-## Project info
+Welcome to the source code for my personal developer portfolio, built to showcase my work as a **Full-Stack Software Engineer** and **Creative Technologist**.
 
-**URL**: https://lovable.dev/projects/6935c38f-e2d4-4bfd-9b7d-7d7e1e8144e0
+This site reflects both the technical depth of my experience (backend-first mindset with strong frontend skills) and my creative work in music, startups, and digital products.
 
-## How can I edit this code?
+🌐 **Live Site:** [stevenkebila.com](https://stevenkebila.com)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🖼️ About This Portfolio
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6935c38f-e2d4-4bfd-9b7d-7d7e1e8144e0) and start prompting.
+Built with performance and clarity in mind, this portfolio is designed to:
 
-Changes made via Lovable will be committed automatically to this repo.
+- Showcase featured projects (backend, frontend, creative tools)
+- Present my dev experience in a clean, square aesthetic
+- Offer quick access to my resume, GitHub, and LinkedIn
+- Highlight startup/product experience (Launchab, Room808, etc.)
+- Feel like a real dev’s digital card — not a design gimmick
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Technology       | Purpose                               |
+|------------------|----------------------------------------|
+| **React**        | UI framework                           |
+| **Vite**         | Blazing fast dev/build tooling         |
+| **Tailwind CSS** | Styling and layout                     |
+| **TypeScript**   | Type-safe components                   |
+| **Netlify**      | Deployment                             |
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## ✨ Features
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- 🖥️ Fully responsive layout with a dev/infra aesthetic (sharp, square UI)
+- 🧠 Section-based project breakdowns with skill highlights
+- ⚙️ Modular file structure for scalability
+- 📄 Easy-to-update content through reusable components
+- 🔗 External links to GitHub, LinkedIn, Resume
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 📁 File Structure
+
+```bash
+stevenkebila-portfolio/
+├── public/              # Static assets (favicon, og images, etc.)
+├── src/
+│   ├── components/      # Shared UI components (Navbar, ProjectCard, etc.)
+│   ├── data/            # Project metadata (titles, tech, links)
+│   ├── pages/           # Core page views
+│   ├── styles/          # Tailwind and global styles
+│   ├── App.tsx
+│   ├── main.tsx
+├── tailwind.config.ts
+├── vite.config.ts
+└── index.html
+```
+
+---
+
+## 🚀 Running Locally
+
+Clone the project:
+
+```bash
+git clone https://github.com/skebila/stevenkebila-portfolio.git
+cd stevenkebila-portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the dev server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+App will run at:  
+`http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📇 Contact
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Feel free to reach out via:
 
-## What technologies are used for this project?
+- 🌐 [stevenkebila.com](https://stevenkebila.com)
+- 🐙 [GitHub](https://github.com/skebila)
+- 💼 [LinkedIn](https://linkedin.com/in/skebila)
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📜 License
 
-## How can I deploy this project?
+MIT — use, fork, and adapt as needed. If this portfolio helps you build yours, give it a ⭐ on GitHub!
 
-Simply open [Lovable](https://lovable.dev/projects/6935c38f-e2d4-4bfd-9b7d-7d7e1e8144e0) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
