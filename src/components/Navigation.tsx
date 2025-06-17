@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Menu, X, Code, User, Briefcase, FolderOpen, Mail } from 'lucide-react';
@@ -16,8 +15,10 @@ const Navigation = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setIsOpen(false); // Close the mobile menu after scrolling
+    } else {
+      console.error(`Section with ID ${href} not found.`);
     }
   };
 
