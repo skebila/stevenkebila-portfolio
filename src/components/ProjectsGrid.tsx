@@ -1,87 +1,87 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 
 const ProjectsGrid = () => {
   const projects = {
-    'full-stack': [
-      {
-        title: 'ClearForms',
-        description: 'HR form manager with approval tracking',
-        tech: [
-          { name: 'React', category: 'react' },
-          { name: 'Node.js', category: 'node' },
-          { name: 'PostgreSQL', category: 'default' },
-          { name: 'Docker', category: 'docker' }
-        ],
-        liveUrl: '#',
-        codeUrl: '#'
-      },
-      {
-        title: 'StockVision',
-        description: 'Inventory dashboard with sales insights',
-        tech: [
-          { name: 'React', category: 'react' },
-          { name: '.NET Core', category: 'dotnet' },
-          { name: 'SQL Server', category: 'default' },
-          { name: 'Redis', category: 'default' }
-        ],
-        liveUrl: '#',
-        codeUrl: '#'
-      },
-      {
-        title: 'LaunchFlow',
-        description: 'CI/CD monitoring tool for dev teams',
-        tech: [
-          { name: 'Vue.js', category: 'default' },
-          { name: 'Node.js', category: 'node' },
-          { name: 'MongoDB', category: 'default' },
-          { name: 'Docker', category: 'docker' }
-        ],
-        liveUrl: '#',
-        codeUrl: '#'
-      }
-    ],
     'frontend': [
       {
-        title: 'FormDeck',
-        description: 'Multi-step form builder with validation and PDF export',
+        title: 'Trackflo',
+        description: 'Modern, developer-focused project and team management app inspired by tools like Linear, Notion, and Trello ',
         tech: [
           { name: 'React', category: 'react' },
           { name: 'TypeScript', category: 'typescript' },
           { name: 'Tailwind', category: 'default' },
-          { name: 'jsPDF', category: 'default' }
+          { name: 'Vite', category: 'default' },
+          {name: 'DiceBear API', category: 'default' }
         ],
-        liveUrl: '#',
-        codeUrl: '#'
+        liveUrl: 'https://trackflo.netlify.app/',
+        codeUrl: 'https://github.com/skebila/trackflo.git'
       }
     ],
     'backend': [
-      {
-        title: 'WorkflowCentral',
-        description: 'Admin tool for managing internal requests',
-        tech: [
-          { name: '.NET Core', category: 'dotnet' },
-          { name: 'SignalR', category: 'default' },
-          { name: 'PostgreSQL', category: 'default' },
-          { name: 'Redis', category: 'default' }
-        ],
-        liveUrl: '#',
-        codeUrl: '#'
-      },
-      {
-        title: 'InsightTrack',
-        description: 'Real-time business analytics dashboard',
-        tech: [
-          { name: 'Python', category: 'default' },
-          { name: 'FastAPI', category: 'default' },
-          { name: 'MongoDB', category: 'default' },
-          { name: 'Celery', category: 'default' }
-        ],
-        liveUrl: '#',
-        codeUrl: '#'
-      }
+      // {
+      //   title: 'WorkflowCentral',
+      //   description: 'Admin tool for managing internal requests',
+      //   tech: [
+      //     { name: '.NET Core', category: 'dotnet' },
+      //     { name: 'SignalR', category: 'default' },
+      //     { name: 'PostgreSQL', category: 'default' },
+      //     { name: 'Redis', category: 'default' }
+      //   ],
+      //   liveUrl: '#',
+      //   codeUrl: '#'
+      // },
+      // {
+      //   title: 'InsightTrack',
+      //   description: 'Real-time business analytics dashboard',
+      //   tech: [
+      //     { name: 'Python', category: 'default' },
+      //     { name: 'FastAPI', category: 'default' },
+      //     { name: 'MongoDB', category: 'default' },
+      //     { name: 'Celery', category: 'default' }
+      //   ],
+      //   liveUrl: '#',
+      //   codeUrl: '#'
+      // }
+    ],
+    'full-stack': [
+      // {
+      //   title: 'ClearForms',
+      //   description: 'HR form manager with approval tracking',
+      //   tech: [
+      //     { name: 'React', category: 'react' },
+      //     { name: 'Node.js', category: 'node' },
+      //     { name: 'PostgreSQL', category: 'default' },
+      //     { name: 'Docker', category: 'docker' }
+      //   ],
+      //   liveUrl: '#',
+      //   codeUrl: '#'
+      // },
+      // {
+      //   title: 'StockVision',
+      //   description: 'Inventory dashboard with sales insights',
+      //   tech: [
+      //     { name: 'React', category: 'react' },
+      //     { name: '.NET Core', category: 'dotnet' },
+      //     { name: 'SQL Server', category: 'default' },
+      //     { name: 'Redis', category: 'default' }
+      //   ],
+      //   liveUrl: '#',
+      //   codeUrl: '#'
+      // },
+      // {
+      //   title: 'LaunchFlow',
+      //   description: 'CI/CD monitoring tool for dev teams',
+      //   tech: [
+      //     { name: 'Vue.js', category: 'default' },
+      //     { name: 'Node.js', category: 'node' },
+      //     { name: 'MongoDB', category: 'default' },
+      //     { name: 'Docker', category: 'docker' }
+      //   ],
+      //   liveUrl: '#',
+      //   codeUrl: '#'
+      // }
     ]
   };
 
@@ -119,21 +119,24 @@ const ProjectsGrid = () => {
       </div>
       
       <div className="flex gap-3">
-        <Button
-          size="sm"
-          className="flex-1 bg-purple-muted hover:bg-purple-muted/80 text-white border-0 light:bg-[#5D3FD3] light:hover:bg-[#4A2FB8]"
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 bg-purple-muted hover:bg-purple-muted/80 text-white border-0 light:bg-[#5D3FD3] light:hover:bg-[#4A2FB8] px-4 py-2 rounded text-center flex items-center justify-center"
         >
           <ExternalLink className="mr-2 h-4 w-4" />
           Demo
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          className="flex-1 border-green-muted text-green-muted hover:bg-green-muted hover:text-white light:border-[#2CB1BC] light:text-[#2CB1BC] light:hover:bg-[#2CB1BC] light:hover:text-white"
+        </a>
+        <a
+          href={project.codeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 border-green-muted text-green-muted hover:bg-green-muted hover:text-white light:border-[#2CB1BC] light:text-[#2CB1BC] light:hover:bg-[#2CB1BC] light:hover:text-white px-4 py-2 rounded text-center flex items-center justify-center"
         >
           <Github className="mr-2 h-4 w-4" />
           Code
-        </Button>
+        </a>
       </div>
     </motion.div>
   );
@@ -156,14 +159,8 @@ const ProjectsGrid = () => {
           </p>
         </motion.div>
 
-        <Tabs defaultValue="full-stack" className="w-full">
+        <Tabs defaultValue="frontend" className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-8 bg-dark-bg border border-purple-muted/20 light:bg-[#F9FAFB] light:border-[#ECECEC] rounded-none p-1">
-            <TabsTrigger 
-              value="full-stack" 
-              className="font-mono text-sm data-[state=active]:bg-purple-muted data-[state=active]:text-white light:data-[state=active]:bg-[#5D3FD3] light:data-[state=active]:text-white rounded-none border-b-2 border-transparent data-[state=active]:border-purple-muted light:data-[state=active]:border-[#5D3FD3] transition-all duration-200"
-            >
-              Full-Stack
-            </TabsTrigger>
             <TabsTrigger 
               value="frontend" 
               className="font-mono text-sm data-[state=active]:bg-purple-muted data-[state=active]:text-white light:data-[state=active]:bg-[#5D3FD3] light:data-[state=active]:text-white rounded-none border-b-2 border-transparent data-[state=active]:border-purple-muted light:data-[state=active]:border-[#5D3FD3] transition-all duration-200"
@@ -175,6 +172,12 @@ const ProjectsGrid = () => {
               className="font-mono text-sm data-[state=active]:bg-purple-muted data-[state=active]:text-white light:data-[state=active]:bg-[#5D3FD3] light:data-[state=active]:text-white rounded-none border-b-2 border-transparent data-[state=active]:border-purple-muted light:data-[state=active]:border-[#5D3FD3] transition-all duration-200"
             >
               Backend/Admin
+            </TabsTrigger>
+            <TabsTrigger 
+              value="full-stack" 
+              className="font-mono text-sm data-[state=active]:bg-purple-muted data-[state=active]:text-white light:data-[state=active]:bg-[#5D3FD3] light:data-[state=active]:text-white rounded-none border-b-2 border-transparent data-[state=active]:border-purple-muted light:data-[state=active]:border-[#5D3FD3] transition-all duration-200"
+            >
+              Full-Stack
             </TabsTrigger>
           </TabsList>
 
