@@ -13,11 +13,11 @@ const Navigation = () => {
   ];
 
   const scrollToSection = (href: string) => {
+    setIsOpen(false); // Close the mobile menu immediately
     const element = document.querySelector(href);
     if (element) {
       const offset = element.getBoundingClientRect().top + window.scrollY - 80; // Adjust for fixed navbar height
       window.scrollTo({ top: offset, behavior: 'smooth' });
-      setIsOpen(false); // Close the mobile menu after scrolling
     } else {
       console.error(`Section with ID ${href} not found.`);
     }
@@ -88,7 +88,7 @@ const Navigation = () => {
               <motion.button
                 key={item.name}
                 whileHover={{ x: 4 }}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => scrollToSection(item.href)} // Ensure menu closes and scrolls correctly
                 className="flex items-center space-x-3 text-text-secondary hover:text-text-primary font-mono text-sm transition-colors duration-200 w-full text-left light:text-gray-600 light:hover:text-[#5D3FD3]"
               >
                 <item.icon className="h-4 w-4" />
