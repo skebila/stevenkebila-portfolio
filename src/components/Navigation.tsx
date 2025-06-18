@@ -81,7 +81,7 @@ const Navigation = () => {
           initial={false}
           animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
           transition={{ duration: 0.3 }}
-          className={`md:hidden ${isOpen ? 'overflow-hidden' : ''}`} // Dynamically apply overflow-hidden
+          className={`md:hidden ${isOpen ? '' : 'hidden'}`} // Completely hide menu when closed
         >
           <div className="py-4 space-y-4 border-t border-purple-muted/20 light:border-[#ECECEC]">
             {navItems.map((item) => (
