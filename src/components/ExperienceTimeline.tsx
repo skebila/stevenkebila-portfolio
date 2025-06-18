@@ -7,40 +7,41 @@ const ExperienceTimeline = () => {
       title: 'Full Stack Developer',
       company: 'Freelance',
       location: 'Remote',
-      duration: 'Jan 2024 - Present',
-      description: 'Building custom web applications for clients using modern technologies. Specializing in React, Node.js, and cloud deployments.',
+      duration: 'Mar 2024 - Feb 2025',
+      description: 'Building custom web applications for clients using modern technologies.',
       achievements: [
-        'Delivered 5+ full-stack applications',
-        'Improved client workflow efficiency by 40%',
-        'Implemented CI/CD pipelines reducing deployment time by 60%'
+        'Developed and deployed web solutions using Python, React, Node.js, and AWS',
+        'Managed DevOps, security, and infrastructure using Docker, Kubernetes, and CI/CD pipelines.',
+        'Implemented JWT/OAuth2 authentication to enhance API security',
+        'Handled full SDLC, from gathering requirements to production release and monitoring.'
       ],
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker']
-    },
-    {
-      title: 'Software Developer',
-      company: 'Tech Startup',
-      location: 'Toronto, ON',
-      duration: 'Jun 2023 - Dec 2023',
-      description: 'Developed and maintained scalable web applications using React and .NET Core. Collaborated with cross-functional teams to deliver high-quality software solutions.',
-      achievements: [
-        'Built responsive web applications serving 10k+ users',
-        'Reduced API response times by 35%',
-        'Mentored 2 junior developers'
-      ],
-      technologies: ['.NET Core', 'React', 'SQL Server', 'Azure']
+      technologies: ['React', 'Node.js', 'Python', 'PostgreSQL', 'AWS', 'Docker']
     },
     {
       title: 'Junior Developer',
-      company: 'Digital Agency',
+      company: 'Richards-Wilcox Canada',
       location: 'Mississauga, ON',
-      duration: 'Sep 2022 - May 2023',
+      duration: 'Feb 2023 - Mar 2024',
+      description: 'Designed and built internal tools with ASP.NET Core, improving workflow automation and data syncing. Collaborated with cross-functional teams to deliver high-quality software solutions.',
+      achievements: [
+        'Built responsive web applications serving 10k+ users',
+        'Reduced API response times by 35%',
+        'Led the development of secure, scalable APIs, integrated with Azure and SQL Server.'
+      ],
+      technologies: ['.NET Core', 'React', 'SQL Server', 'Azure', 'CI/CD']
+    },
+    {
+      title: 'Web Developer',
+      company: 'Lumose Marketplace Inc.',
+      location: 'Toronto, ON',
+      duration: 'Mar 2022 - Feb 2023',
       description: 'Worked on client projects ranging from e-commerce platforms to content management systems. Gained experience in full-stack development and client communication.',
       achievements: [
         'Completed 15+ client projects',
-        'Learned 5 new technologies in 6 months',
+        'Built and tested real-time data exchange APIs with third-party integrations.',
         'Improved code review process'
       ],
-      technologies: ['PHP', 'JavaScript', 'MySQL', 'WordPress']
+      technologies: ['React', 'JavaScript', 'MySQL', 'CMS', 'Selenium', 'Jasmine']
     }
   ];
 
