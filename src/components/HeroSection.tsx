@@ -106,7 +106,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg text-text-tertiary mb-12 max-w-2xl mx-auto light:text-gray-500"
           >
-            4+ years of experience architecting robust backend systems and crafting intuitive frontend experiences
+            3+ years of experience architecting robust backend systems and crafting intuitive frontend experiences
           </motion.p>
           
           <motion.div
