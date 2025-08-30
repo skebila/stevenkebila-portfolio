@@ -43,9 +43,21 @@ const ProjectsGrid = () => {
         ],
         liveUrl: '#',
         codeUrl: 'https://github.com/skebila/student-haven.git'
-      }
+      },
     ],
     'freelance': [
+      {
+        title: 'Touch of Gold',
+        description: 'Makeup artist website',
+        tech: [
+          { name: 'React', category: 'react' },
+          { name: 'TypeScript', category: 'typescript' },
+          { name: 'Vite', category: 'default' },
+          { name: 'TailwindCSS', category: 'default' }
+        ],
+        liveUrl: 'touchofgold.online',
+        codeUrl: '#'
+      }
       // {
       //   title: 'WorkflowCentral',
       //   description: 'Admin tool for managing internal requests',
@@ -164,12 +176,12 @@ const ProjectsGrid = () => {
             >
               Freelance
             </TabsTrigger>
-            {/* <TabsTrigger 
+            <TabsTrigger 
               value="enterprise" 
               className="font-mono text-sm data-[state=active]:bg-purple-muted data-[state=active]:text-white light:data-[state=active]:bg-[#5D3FD3] light:data-[state=active]:text-white rounded-none border-b-2 border-transparent data-[state=active]:border-purple-muted light:data-[state=active]:border-[#5D3FD3] transition-all duration-200"
             >
               Enterprise
-            </TabsTrigger> */}
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="personal" className="mt-0">

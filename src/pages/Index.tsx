@@ -31,7 +31,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center space-y-4">
             {/* Social icons */}
-            <div className="flex justify-center space-x-4">
+            {/* <div className="flex justify-center space-x-4">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <motion.a
@@ -107,7 +107,7 @@ const Index = () => {
                   <p className="font-mono">Email</p>
                 </TooltipContent>
               </Tooltip>
-            </div>
+            </div> */}
             {/* Copyright */}
             <p className="text-text-tertiary font-mono text-sm text-center">
               © 2025 Full Stack Developer. Built with React & TypeScript.
