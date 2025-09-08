@@ -21,7 +21,7 @@ const ExperienceTimeline = () => {
       title: 'Junior Developer',
       company: 'Richards-Wilcox Canada',
       location: 'Mississauga, ON',
-      duration: 'Feb 2023 - Mar 2024',
+      duration: 'Feb 2023 - Jan 2025',
       description: 'Designed and built internal tools with ASP.NET Core, improving workflow automation and data syncing. Collaborated with cross-functional teams to deliver high-quality software solutions.',
       achievements: [
         'Built responsive web applications serving 10k+ users',

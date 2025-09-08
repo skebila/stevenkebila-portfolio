@@ -1,7 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Download, User } from 'lucide-react';
+import { FileText, User } from 'lucide-react';
 
 const HeroSection = () => {
   const scrollToAbout = () => {
@@ -15,7 +15,14 @@ const HeroSection = () => {
   };
 
   const openResume = () => {
-    window.open('https://sheridanc-my.sharepoint.com/personal/kuatewaf_shernet_sheridancollege_ca/_layouts/15/Doc.aspx?sourcedoc={fda1d42a-ab0d-4c24-9dbc-c5d84d44cdcb}&action=embedview', '_blank', 'noopener,noreferrer');
+    // Deprecated: replaced by smooth scroll to experience section
+    const expSection = document.querySelector('#experience-section');
+    if (expSection) {
+      expSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   };
 
   return (
@@ -132,8 +139,8 @@ const HeroSection = () => {
                 onClick={openResume}
                 className="border-blue-cool text-blue-cool hover:bg-blue-cool hover:text-white px-8 py-4 text-lg font-medium transition-all duration-300 light:bg-gradient-to-r light:from-[#F46A4E] light:to-[#E55D4A] light:hover:from-[#E55D4A] light:hover:to-[#D54E3A] light:text-white light:border-transparent light:shadow-lg light:shadow-orange-200"
               >
-                <Download className="mr-2 h-5 w-5" />
-                Grab My Resume
+                <FileText className="mr-2 h-5 w-5" />
+                My Resume
               </Button>
             </motion.div>
           </motion.div>
