@@ -4,10 +4,10 @@ import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 const ExperienceTimeline = () => {
   const experiences = [
     {
-      title: 'Full Stack Developer',
-      company: 'Freelance',
+      title: 'Freelance Software Developer',
+      company: 'Upwork, Fiverr, ComeUp',
       location: 'Remote',
-      duration: 'Mar 2024 - Feb 2025',
+      duration: 'Feb 2025 - Present',
       description: 'Building custom web applications for clients using modern technologies.',
       achievements: [
         'Developed and deployed web solutions using Python, React, Node.js, and AWS',
