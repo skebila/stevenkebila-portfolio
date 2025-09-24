@@ -15,7 +15,7 @@ const ProjectsGrid = () => {
           { name: 'Amazon API Gateway', category: 'default' },
           {name: 'Amazon DynamoDB', category: 'default' }
         ],
-        //liveUrl: 'https://daily-peace.netlify.app/',
+        liveUrl: '#',
         codeUrl: 'https://github.com/skebila/daily-peace.git'
       },
       {
