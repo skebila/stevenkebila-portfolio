@@ -6,6 +6,19 @@ const ProjectsGrid = () => {
   const projects = {
     'personal': [
       {
+        title: 'Daily Peace',
+        description: 'A cross-platform mobile app built with React Native. The frontend communicates with a serverless AWS backend (Lambda + DynamoDB) via a custom REST API to fetch and display data.',
+        tech: [
+          { name: 'React Native (Expo)', category: 'react' },
+          { name: 'JavaScript', category: 'typescript' },
+          { name: 'AWS Lambda', category: 'default' },
+          { name: 'Amazon API Gateway', category: 'default' },
+          {name: 'Amazon DynamoDB', category: 'default' }
+        ],
+        //liveUrl: 'https://daily-peace.netlify.app/',
+        codeUrl: 'https://github.com/skebila/daily-peace.git'
+      },
+      {
         title: 'Trackflo',
         description: 'Modern, developer-focused project and team management app inspired by tools like Linear, Notion, and Trello ',
         tech: [
